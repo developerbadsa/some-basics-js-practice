@@ -7,7 +7,7 @@ function cubeNumber(number) {
         return cubeNumberResult;
     }
 }
-// console.log(cubeNumber(3))
+console.log(cubeNumber(4))
 
 // Problem 2 “matchFinder()”
 function matchFinder(string1, string2) {
@@ -18,7 +18,7 @@ function matchFinder(string1, string2) {
         return matchFinderResult;
     }
 }
-// console.log(matchFinder("123", "1"));
+console.log(matchFinder("123", "1"));
 
 //Problem 3 sortMaker()
 
@@ -36,7 +36,7 @@ function sortMaker(arr) {
     }
     return reversedArray;
 }
-// console.log(sortMaker([4,2]));
+console.log(sortMaker([4,-2]));
 
 // problem 4 
 
@@ -58,6 +58,25 @@ function findAddress(obj) {
 }
 
 
+console.log(findAddress({street:17670, house: "175A", society:'“Ear7thPerfect”'}))
 
-let obj = {street:17670, house: "175A", society:'“Ear7thPerfect”'}
-console.log(findAddress(obj))
+// problem 5
+
+function canPay(changeArray, totalDue) {
+    if(changeArray.length === 0){
+        return "Array is empty"
+    }else{
+        let changeArrayAddition = 0;
+
+        for(let i = 0; i < changeArray.length; i++){
+            changeArrayAddition += changeArray[i]
+        }
+        if(changeArrayAddition<=10){
+            return false;
+        }else{
+            return true;
+        }
+    }
+}
+
+console.log(canPay([20], 10))
