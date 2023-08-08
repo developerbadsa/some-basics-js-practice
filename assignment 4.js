@@ -38,3 +38,26 @@ function sortMaker(arr) {
 }
 // console.log(sortMaker([4,2]));
 
+// problem 4 
+
+function findAddress(obj) {
+    let address = obj.street +", "+ obj.house +", "+ obj.society;
+    let { street, house, society } = obj;
+
+    if(!street || !house || !society){
+        if(!street){
+            return "__, "+ obj.house +", "+ obj.society;
+        }else if(!house){
+            return obj.street +", __"+", "+ obj.society;
+        }else if(!society){
+            return obj.street +", "+ obj.house +", __";
+        }
+    }else{
+     return address;
+    }
+}
+
+
+
+let obj = {street:17670, house: "175A", society:'“Ear7thPerfect”'}
+console.log(findAddress(obj))
